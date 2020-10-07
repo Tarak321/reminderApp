@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Medical Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Illness</th>
+      <th>Drname</th>
+      <th>Medicine</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Dosage amount</th>
+      <th>Dosage frequency</th>
+      <th>Dosage time</th>
+      <th>Email notify</th>
+      <th>User</th>
+      <th>Dependent</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medical_histories.each do |medical_history| %>
+      <tr>
+        <td><%= medical_history.illness %></td>
+        <td><%= medical_history.drname %></td>
+        <td><%= medical_history.medicine %></td>
+        <td><%= medical_history.start_date %></td>
+        <td><%= medical_history.end_date %></td>
+        <td><%= medical_history.dosage_amount %></td>
+        <td><%= medical_history.dosage_frequency %></td>
+        <td><%= medical_history.dosage_time %></td>
+        <td><%= medical_history.email_notify %></td>
+        <td><%= medical_history.user_id %></td>
+        <td><%= medical_history.dependent_id %></td>
+        <td><%= link_to 'Show', medical_history %></td>
+        <td><%= link_to 'Edit', edit_medical_history_path(medical_history) %></td>
+        <td><%= link_to 'Destroy', medical_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medical History', new_medical_history_path %>

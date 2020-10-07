@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Illness:</strong>
+  <%= @medical_history.illness %>
+</p>
+
+<p>
+  <strong>Drname:</strong>
+  <%= @medical_history.drname %>
+</p>
+
+<p>
+  <strong>Medicine:</strong>
+  <%= @medical_history.medicine %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @medical_history.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @medical_history.end_date %>
+</p>
+
+<p>
+  <strong>Dosage amount:</strong>
+  <%= @medical_history.dosage_amount %>
+</p>
+
+<p>
+  <strong>Dosage frequency:</strong>
+  <%= @medical_history.dosage_frequency %>
+</p>
+
+<p>
+  <strong>Dosage time:</strong>
+  <%= @medical_history.dosage_time %>
+</p>
+
+<p>
+  <strong>Email notify:</strong>
+  <%= @medical_history.email_notify %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @medical_history.user_id %>
+</p>
+
+<p>
+  <strong>Dependent:</strong>
+  <%= @medical_history.dependent_id %>
+</p>
+
+<%= link_to 'Edit', edit_medical_history_path(@medical_history) %> |
+<%= link_to 'Back', medical_histories_path %>

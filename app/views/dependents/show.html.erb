@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Relationship:</strong>
+  <%= @dependent.relationship %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dependent.name %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @dependent.email_address %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @dependent.contact_number %>
+</p>
+
+<p>
+  <strong>Blood group:</strong>
+  <%= @dependent.blood_group %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @dependent.date_of_birth %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @dependent.weight %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @dependent.height %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @dependent.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_dependent_path(@dependent) %> |
+<%= link_to 'Back', dependents_path %>

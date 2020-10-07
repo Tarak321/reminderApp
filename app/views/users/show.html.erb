@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<% if @user.profile_image.attached? %>
+<div class="card" style="width:150px">
+    <%= image_tag @user.profile_image, style: "width:100%" %>
+</div>
+<% end %>
+
+
+<p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+</p>
+
+<p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+</p>
+
+<p>
+    <strong>Email address:</strong>
+    <%= @user.email_address %>
+</p>
+
+<p>
+    <strong>Contact number:</strong>
+    <%= @user.contact_number %>
+</p>
+
+<p>
+    <strong>Country:</strong>
+    <%= @user.country %>
+</p>
+
+<p>
+    <strong>Date of birth:</strong>
+    <%= @user.date_of_birth %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

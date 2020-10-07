@@ -1,0 +1,72 @@
+<%= form_with(model: medical_history, local: true) do |form| %>
+  <% if medical_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(medical_history.errors.count, "error") %> prohibited this medical_history from being saved:</h2>
+
+      <ul>
+        <% medical_history.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :illness %>
+    <%= form.text_field :illness %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drname %>
+    <%= form.text_field :drname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medicine %>
+    <%= form.text_field :medicine %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dosage_amount %>
+    <%= form.text_field :dosage_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dosage_frequency %>
+    <%= form.text_field :dosage_frequency %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dosage_time %>
+    <%= form.text_field :dosage_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email_notify %>
+    <%= form.check_box :email_notify %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dependent_id %>
+    <%= form.text_field :dependent_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
